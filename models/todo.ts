@@ -6,7 +6,7 @@ export interface IToDo {
   content: string;
 }
 
-const pokemonSchema = new Schema<IToDo>(
+const todoSchema = new Schema<IToDo>(
   {
     content: {
       type: String,
@@ -15,5 +15,5 @@ const pokemonSchema = new Schema<IToDo>(
   },
   { timestamps: true }
 );
-const ToDoModel = mongoose.model<IToDo>("Pokemon", pokemonSchema);
+const ToDoModel = mongoose.model<IToDo>("ToDo", todoSchema);
 export default ToDoModel;
